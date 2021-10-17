@@ -14,5 +14,7 @@ public class SendChat : MonoBehaviour
         var messageGo = Instantiate(messagePrefab, messageBox);
         messageGo.GetComponentInChildren<Text>().text = $"{sender}: {inputField.text}";
         inputField.text = "";
+        if (messageBox.childCount < 7) return;
+        Destroy(messageBox.GetChild(0).gameObject);
     }
 }
