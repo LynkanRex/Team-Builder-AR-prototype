@@ -5,7 +5,7 @@ using UnityEngine;
 public class DropDownButton : MonoBehaviour
 {
     [SerializeField] private GameObject accordion;
-    private RectTransform rectTransform => GetComponentInChildren<RectTransform>();
+    [SerializeField] private RectTransform rectTransform;
     
     public void SetChildPosition()
     {
